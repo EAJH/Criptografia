@@ -24,6 +24,9 @@ Cada práctica incluye la implementación de algoritmos y técnicas criptográfi
 - *Práctica 1:* Cifrado de César 
 - *Práctica 2:* Cifrado Vigenère y método Kasiski 
 - *Práctica 3:* Cifrado de Wheatstone 
+- *Práctica 4:* Cifrado Verman
+- *Práctica 5:* Funcionamiento de Enigma
+- *Práctica 6:* Cifrado Hill. Cálculo de matrices inversas
 
 ---
 
