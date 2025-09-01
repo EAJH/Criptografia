@@ -137,6 +137,7 @@ def inversa(matriz):
     return inv
 
 
+# ------------- Impresión de la matriz en formato bidimensional ---------
 def imprimir_matriz(matriz):
 
     n = len(matriz)
@@ -146,6 +147,8 @@ def imprimir_matriz(matriz):
             print(matriz[fila][columna], end=" ")
         print()
 
+
+# -------------- Lectura de una matriz elemento por elemento -------------
 def ingresar_matriz():
     n = int(input("Ingrese la longitud de la matriz cuadrada: "))
     matriz = []
@@ -161,6 +164,8 @@ def ingresar_matriz():
 
     return matriz
 
+
+# ----------- Ejecución del algoritmo -------------
 '''
 matriz = [[1,3,5,9,7,88],
           [1,3,1,7,88,12],
