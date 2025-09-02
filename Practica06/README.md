@@ -23,7 +23,7 @@ del algoritmo de Hill radica en la naturaleza propia de las matrices y sus opera
 ## Qué y cómo se logró
 
 - Se creó una función específica que permitiera leer la longitud de la matriz
-deseada y con base a esta, ingresar elemento por elemento de la misma.
+deseada y con base a esta, generarla automáticamente.
 - Una vez que los elementos de la matriz han sido leídos se manda a llamar la 
 función de `inversa(matriz)`que implementa el procedimiento matemático visto en clase:
   1. Calcular el determinante de la matriz a través de la función `determinante(matriz)`, si el determinante es igual a 0, la matriz ingresada no tiene inversa:
