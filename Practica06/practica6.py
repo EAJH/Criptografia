@@ -8,6 +8,9 @@ de la máximo que se pueda
 
 '''
 
+import random
+bandera_inversa = True
+
 # ----------- Cálculo determinante por cofactores ----------
 def determinante(matriz):
 
@@ -119,7 +122,8 @@ def inversa(matriz):
     det = determinante(matriz)
 
     if det == 0:
-        return ("La matriz no tiene inversa.\n")
+        bandera_inversa = False
+        return bandera_inversa
     
     # 2. Si el determinante es diferente de cero, sí hay inversa
 
@@ -134,6 +138,7 @@ def inversa(matriz):
         for columna in range(0,n):
             fila_inversa.append(round((factor_multiplicativo_determinante)*(adj_transp[fila][columna]),4))
         inv.append(fila_inversa)
+
     return inv
 
 
@@ -165,16 +170,48 @@ def ingresar_matriz():
     return matriz
 
 
+
+# --------------- Función que genera una matriz aleatorio n x n -----------
+def generar_matriz():
+    n = int(input("Ingrese la longitud de la matriz cuadrada: "))
+   
+    matriz = []
+    for i in range(0,n):
+        fila_vacia = []
+        for j in range(0,n):
+            fila_vacia.append(0)
+        matriz.append(fila_vacia)
+
+    for fila in range(0,n):
+        for columna in range(0,n):
+            matriz[fila][columna] = int(random.randint(0,100))
+
+    return matriz
+
+
+
 # ----------- Ejecución del algoritmo -------------
 '''
-matriz = [[1,3,5,9,7,88],
-          [1,3,1,7,88,12],
-          [4,3,9,7,6,456],
-          [5,2,0,9,6,7],
+matriz = [[1,3,5,9,7,88,45,2],
+          [1,3,1,7,88,12,34,3],
+          [4,3,9,7,6,456,35,56],
+          [5,2,0,9,6,7,45,67],
           [2,2,33,4,7,0],
           [44,6,23,1,22,4]]
 '''
-matriz = ingresar_matriz()
-resultado = inversa(matriz)
-print("\nLa inversa de la matriz es: \n")
-imprimir_matriz(resultado)
+
+def main():
+    matriz = generar_matriz()
+    resultado = inversa(matriz)
+
+    if resultado == False:
+        print("La matriz generada no tiene inversa. Matriz generada:\n")
+        imprimir_matriz(matriz)
+    else:
+        print("Matriz generada: \n")
+        imprimir_matriz(matriz)
+        print("\nLa inversa de la matriz es: \n")
+        imprimir_matriz(resultado)
+
+main()
+
