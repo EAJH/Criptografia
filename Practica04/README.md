@@ -1,5 +1,13 @@
 # Práctica 4. Cifrado Vernam
 
+**Integrantes:**
+- López Reyes Alam  
+- García Martínez Luis Eduardo  
+- Juárez Herrera Erick Adrián  
+- Hernández García Pilar Jaqueline
+- Romero Domínguez Ricardo Damián
+- Benitez Pérez Michelle Paulina 
+
 Este proyecto es una implementación simple en Python del **Cifrado de Vernam** (también conocido como *One-Time Pad* o Cifrado de un solo uso). El script permite cifrar y descifrar mensajes utilizando una clave aleatoria que se genera durante el proceso de cifrado y se autodestruye después del descifrado.
 
 ## 1. Descripción Breve de la Implementación
